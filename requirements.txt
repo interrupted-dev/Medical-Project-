@@ -1,0 +1,5 @@
+streamlit
+streamlit-image-select
+Pillow
+google-generativeai
+requests
