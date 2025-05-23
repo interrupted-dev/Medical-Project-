@@ -2,11 +2,8 @@ import streamlit as st
 import google.generativeai as genai
 
 
-
-# Securely load the API key from Streamlit secrets
 api_key = st.secrets["gcp"]["gemini_api_key"]
 genai.configure(api_key=api_key)
-
 model = genai.GenerativeModel("gemini-2.0-flash-lite")
 
 
@@ -19,7 +16,6 @@ body_parts = {
     "Back": ["Upper Back", "Lower Back"],
     "Neck": ["Front", "Back", "Sides"]
 }
-
 
 st.set_page_config(page_title="Medical Diagnosis App", layout="centered")
 
